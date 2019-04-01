@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './routers'
 import store from './store/index'
-import footGuide from "@/common/footGuide"
-Vue.component("FootGuide",footGuide)
+import header from "@/common/header"
+Vue.component("Header",header)
 Vue.config.productionTip = false
 
 new Vue({
