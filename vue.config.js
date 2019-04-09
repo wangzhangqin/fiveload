@@ -17,7 +17,8 @@ module.exports = {
     }
 }
 aaaaaaaaa
-
+我喜欢java
+我喜欢苹果
 // 
 //https://mapi.eyee.com/capi/product/open/getAssociationalWordListV20
 //https://mapi.eyee.com/capi/product/qiuxie/open/homefirstv322
