@@ -11,7 +11,7 @@
                 </div>
                 <div class="shop-cart" v-if="isDoor" @click="handleToCart">
                     <i class="iconfont">&#xe899;</i>
-                    <div class="totalNum_home">{{this.$store.state.cart.totalNum}}</div>
+                    <div class="totalNum_home">{{num}}</div>
                 </div>
                 <span v-else class="cancel" @click="handleBack">
                   取消
@@ -22,7 +22,7 @@
 </template>
 <script>
 export default {
-  props: ["search","isDoor"],
+  props: ["search","isDoor","num"],
   methods: {
     handleBack(){
       console.log(111)

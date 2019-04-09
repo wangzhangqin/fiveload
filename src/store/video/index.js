@@ -10,8 +10,8 @@ export default{
         }
     },
     actions : {
-        async handleActionsData({commit}){
-            let data = await getData();
+        async handleActionsData({commit},params){
+            let data = await getData(params);
             commit("handleMuData",data.data.vlist)
         }
     }

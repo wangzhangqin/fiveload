@@ -1,4 +1,4 @@
-import {getColumn,getSlider,getButton,getOtherAdvert} from "../../api/index"
+import {getColumn,getSlider,getButton,getOtherAdvert,getArticle} from "../../api/index"
 export default{
     namespaced : true,
     state : {
@@ -13,7 +13,8 @@ export default{
         articleList : [],
         top : 0,
         flag : false,
-        color : 0
+        color : 0,
+        page : 1
     },
     mutations : {
         getMutationColumn(state,params){
@@ -44,6 +45,10 @@ export default{
             }
             
 
+        },
+        handleMuArticle(state,params){
+            state.articleList = [...state.articleList,...params.list];
+            state.page = params+1;
         }
     },
     actions : {
@@ -60,6 +65,10 @@ export default{
             }
             commit("handleMuScroll",obj)
             
+        },
+        async getActionsMoreArticle({commit},params){
+            let data = await getArticle({page:params});
+            commit("handleMuArticle",{list:data.data.ads_info,page:params})
         },
         async getActionsColumn({commit}){
             let data = await getColumn();

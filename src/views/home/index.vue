@@ -3,7 +3,7 @@
     <div>
         <div class="ios">
             <div class="sticky">
-                <Header search="search" isDoor="true"></Header>
+                <Header search="search" isDoor="true" :num="num"></Header>
                 <ul class="nav_title" v-if="this.$store.state.home.flag">
                   <routerLink tag="li" to="/sales">
                     <a href="javascript:;">上新</a>
@@ -140,12 +140,20 @@ import Vuex from "vuex";
 import Swiper from "swiper";
 import "swiper/dist/css/swiper.min.css";
 import { setTimeout } from "timers";
+import {getStore} from "@/utils/storage.js"
 export default {
+  data() {
+    return {
+      num : 0
+    }
+  },
   created() {
     this.getColumn();
     this.getSlider();
     this.getButton();
     this.getOtherAdvert();
+    this.num = getStore("shopCartInfo").length;
+    console.log(this.num)
   },
 
   computed: {
@@ -188,6 +196,7 @@ export default {
         },
       });
     });
+    this.$refs.bscroll.getMoreArticle(false)
   }
 };
 </script>

@@ -211,13 +211,16 @@ export default {
     },
     methods: {
         ...Vuex.mapActions({
-            getData : "good/handleActionsData",
-            handleToCart : "good/handleActionToCart"
+            getData : "good/handleActionsData"
         }),
         ...Vuex.mapMutations({
             handleAdd : "good/handleMuAdd",
             handleReduce : "good/handleMuReduce"
         }),
+        handleToCart(obj){
+            this.$store.dispatch("good/handleActionToCart",obj);
+            this.flag = false;
+        },
         handleInfo(){
             console.log(111)
             this.$store.dispatch("good/handleActionGoodInfo",this.$store.state.brand.goodId);

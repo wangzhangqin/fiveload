@@ -10,12 +10,12 @@
             <nav class="nav">
                 <BScroll>
                 <div>
-                    <a href="" class="a-hooks act-link">所有分类</a>
-                    <a href="" class="a-hooks">服饰穿搭</a>
-                    <a href="" class="a-hooks">秀场直击</a>
-                    <a href="" class="a-hooks">美容化妆</a>
-                    <a href="" class="a-hooks">品牌独家</a>
-                    <a href="" class="a-hooks">生活方式</a>
+                    <a href="javascript:;" class="a-hooks act-link" @click="getData({page:1,type_id:0})">所有分类</a>
+                    <a href="javascript:;" class="a-hooks" @click="getData({page:1,type_id:1})">服饰穿搭</a>
+                    <a href="javascript:;" class="a-hooks" @click="getData({page:1,type_id:2})">秀场直击</a>
+                    <a href="javascript:;" class="a-hooks" @click="getData({page:1,type_id:3})">美容化妆</a>
+                    <a href="javascript:;" class="a-hooks" @click="getData({page:1,type_id:4})">品牌独家</a>
+                    <a href="javascript:;" class="a-hooks" @click="getData({page:1,type_id:5})">生活方式</a>
                 </div>
                 </BScroll>
             </nav>
@@ -63,7 +63,6 @@ import Vuex from "vuex"
 export default {
     created() {
         this.getData();
-        console.log(111)
     },
     computed: {
         ...Vuex.mapState({
@@ -133,6 +132,7 @@ export default {
 }
 .warthbuy{
     padding-top: .88rem;
+    padding-bottom: .88rem;
     .warthbuy-list{
         margin-top: .16rem;
         background: #fff;
@@ -142,6 +142,7 @@ export default {
             display: flex;
             padding: .2rem 0;
             align-items: center;
+            background: #fff;
             .w-logo{
                 width: .7rem;
                 height: .7rem;

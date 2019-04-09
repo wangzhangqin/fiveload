@@ -32,8 +32,12 @@ export default {
             
             this.scroll.on("pullingUp",()=>{
                 this.$emit("handle",true)
-            console.log(111)
                 this.$store.dispatch("sales/handleActionsNew",this.$store.state.sales.page)
+            })
+        },
+        getMoreArticle(){
+            this.scroll.on("pullingUp",()=>{
+                this.$store.dispatch("home/getActionsMoreArticle",this.$store.state.home.page)
             })
         },
         update(){
