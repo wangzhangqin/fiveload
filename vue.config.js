@@ -9,7 +9,7 @@ module.exports = {
                     "^/api": ""
                 }
             },
-            "/bbbbbbb": {
+            "/aaaa": {
                 target: "https://mapi.eyee.com",
                 changeOrigin: true
             }
