@@ -9,14 +9,14 @@ module.exports = {
                     "^/api": ""
                 }
             },
-            "/capi": {
+            "/bbbbbbb": {
                 target: "https://mapi.eyee.com",
                 changeOrigin: true
             }
         }
     }
 }
-
+aaaaaaaaa
 
 // 
 //https://mapi.eyee.com/capi/product/open/getAssociationalWordListV20
