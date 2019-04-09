@@ -2,9 +2,9 @@
 module.exports = {
     devServer: {
         proxy: {
-            "/api": {
+            "/sh": {
                 target: "https://apim.restful.5lux.com.cn",
-                changeOrigin: true,
+                changeOrigin: false,
                 pathRewrite: {
                     "^/api": ""
                 }
@@ -16,6 +16,7 @@ module.exports = {
         }
     }
 }
+
 
 // 
 //https://mapi.eyee.com/capi/product/open/getAssociationalWordListV20
