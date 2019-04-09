@@ -1,7 +1,10 @@
 <template>
   <div id="app">
+    <keep-alive>
     <router-view/>
-    <FootGuide/>
+    </keep-alive>
+    
+    <FootGuide v-if="this.$route.meta.footTab"/>
   </div>
 </template>
 <script>
